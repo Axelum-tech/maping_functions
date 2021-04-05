@@ -1,0 +1,47 @@
+<button style="transform: rotate(180deg);" onclick="moveLeft();drawMap()">▶</button>
+<span id="gameMap"></span>
+<button onclick="moveRight();drawMap()">▶</button>
+
+
+
+
+<script>
+const LEN = 50
+
+let rx = 1
+
+
+function drawMap(){ 
+    gameMap.innerHTML = ""
+    for(let x=1; x<=LEN; x++){
+        if (x == rx){
+            gameMap.innerHTML+="▶"
+        }else{
+            gameMap.innerHTML+="---"
+        }}
+    }
+    
+function moveLeft(){
+    if (rx==1){
+    rx==rx    
+    }else if(rx>1){
+        rx--
+    }
+       
+}
+
+function moveRight(){
+    if (rx==LEN){
+        rx==rx
+    }else if(rx<LEN){
+        rx++
+
+    }
+
+    
+}
+drawMap()
+</script>
+
+
+
